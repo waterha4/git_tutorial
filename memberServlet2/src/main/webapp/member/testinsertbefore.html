@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+<script>
+	function func(){
+		createElement();
+		addAttribute();
+	}
+	function createElement(){
+		var criteriaNode = document.getElementById("text");
+		var newNode= document.createElement("p");
+		newNode.innerHTML = "새로운 단락";
+		newNode.setAttribute("id","para");
+		document.body.insertBefore(newNode,criteriaNode);
+		
+	}
+	function addAttribute(){
+		document.getElementById("para").setAttribute("style","color:red");
+		
+	}
+</script>
+</head>
+<body>
+	<h3>111111</h3>
+	<button onclick="func()">222222</button>
+	<p id="text">33333</p>
+</body>
+</html>
